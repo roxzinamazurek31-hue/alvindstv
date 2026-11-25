@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en-zm">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get the latest Sport, Movies, Series and Shows</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dstv-styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <button class="icon-button menu-button" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="brand" href="#" aria-label="DStv home">
+        <span class="brand-d">D</span><span class="brand-stv">Stv</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#">Explore</a>
+        <a href="#">Buy</a>
+        <a href="#">Watch</a>
+        <a href="#">My Account</a>
+      </nav>
+      <div class="header-actions">
+        <button class="country" aria-label="Country selector">Zambia <span>⌄</span></button>
+        <button class="search" aria-label="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 5 5"></path></svg>
+        </button>
+        <a class="signin" href="#">Sign in</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-shade"></div>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <h1>Expect more. Expect +</h1>
+          <p>New DStv packages available now</p>
+          <a class="learn-btn" href="#plans">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="packages" id="packages">
+      <p class="section-eyebrow">DStv Stream</p>
+      <h2>Find the plan that fits you</h2>
+      <p class="section-intro">Simple monthly pricing. Choose the entertainment you love.</p>
+
+      <div class="package-grid" id="plans">
+        <article class="package-card" data-kind="stream">
+          <div class="card-head">
+            <p class="badge">Everyday favourites</p>
+            <h3>Starter</h3>
+            <p class="plan-summary">A great start for local favourites, music and entertainment.</p>
+            <div class="price"><sup>K</sup><strong>100</strong><span>per month</span></div>
+            <p class="channel-count">59+ channels included</p>
+          </div>
+          <div class="card-body">
+            <h4>Popular highlights</h4>
+            <ul>
+              <li>Movies, Music &amp; Entertainment</li>
+              <li>Local favourites</li>
+              <li>Wethu+ and Supersport Kickoff</li>
+              <li>M-Net Legends</li>
+              <li>National Geographic Wild</li>
+            </ul>
+          </div>
+          <div class="card-foot">
+            <button type="button" class="sign-btn" data-plan="Starter" data-price="100">Choose Starter</button>
+          </div>
+        </article>
+
+        <article class="package-card" data-kind="stream">
+          <div class="card-head">
+            <p class="badge">More variety</p>
+            <h3>Compact</h3>
+            <p class="plan-summary">More to explore, with selected football and extra family favourites.</p>
+            <div class="price"><sup>K</sup><strong>200</strong><span>per month</span></div>
+            <p class="channel-count">100+ channels included</p>
+          </div>
+          <div class="card-body">
+            <h4>Popular highlights</h4>
+            <ul>
+              <li>Lifestyle, music and documentaries</li>
+              <li>Selected Premier League &amp; Champions League</li>
+              <li>More kids, movies, series, dramas and novellas</li>
+              <li>M-Net Movies+, Stars &amp; Legends</li>
+              <li>Nickelodeon</li>
+              <li>WWE wrestling 24/7 channel</li>
+            </ul>
+          </div>
+          <div class="card-foot">
+            <button type="button" class="sign-btn" data-plan="Compact" data-price="200">Choose Compact</button>
+          </div>
+        </article>
+
+        <article class="package-card premium" data-kind="stream">
+          <div class="card-head">
+            <p class="badge">For the biggest moments</p>
+            <h3>Premium</h3>
+            <p class="plan-summary">The top choice for major football, WWE, UFC and international shows.</p>
+            <div class="price"><sup>K</sup><strong>300</strong><span>per month</span></div>
+            <p class="channel-count">109+ channels included</p>
+          </div>
+          <div class="card-body">
+            <h4>Popular highlights</h4>
+            <ul>
+              <li>All football from the world's top leagues</li>
+              <li>WWE &amp; UFC</li>
+              <li>International movies and series</li>
+              <li>The best of local entertainment</li>
+              <li>Kids and educational channels</li>
+            </ul>
+          </div>
+          <div class="card-foot">
+            <button type="button" class="sign-btn" data-plan="Premium" data-price="300">Choose Premium</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="payment-dialog" aria-labelledby="payment-title">
+    <button class="payment-close" type="button" aria-label="Close payment form">×</button>
+    <p class="payment-eyebrow">DStv Zambia</p>
+    <h2 id="payment-title">Activate your plan</h2>
+    <p class="selected-plan"></p>
+    <form class="payment-form">
+      <label for="smartcard-number">DStv smartcard / IUC number</label>
+      <input id="smartcard-number" name="smartcard" type="text" inputmode="numeric" autocomplete="off" pattern="[0-9]+" required aria-describedby="payment-status" placeholder="Enter your number">
+      <fieldset class="payment-methods">
+        <legend>Payment method</legend>
+        <label>
+          <input type="radio" name="paymentMethod" value="airtel-money" checked>
+          <span><strong>Airtel Money</strong></span>
+        </label>
+        <label>
+          <input type="radio" name="paymentMethod" value="mtn-money">
+          <span><strong>MTN MoMo</strong></span>
+        </label>
+      </fieldset>
+      <button class="airtel-pay" type="submit">Continue with Airtel Money</button>
+      <p class="payment-status" id="payment-status" role="status" aria-live="polite"></p>
+    </form>
+  </dialog>
+
+  <button class="chat-button" aria-label="Chat with us">
+    <svg viewBox="0 0 48 48" aria-hidden="true">
+      <path d="M24 5C13.5 5 5 12.2 5 21c0 5.2 3 9.8 7.7 12.7L10 41l8.2-4.1c1.8.5 3.7.8 5.8.8 10.5 0 19-7.2 19-16S34.5 5 24 5z"></path>
+      <circle cx="16" cy="21" r="2"></circle><circle cx="24" cy="21" r="2"></circle><circle cx="32" cy="21" r="2"></circle>
+    </svg>
+  </button>
+
+  <div class="menu-drawer" aria-hidden="true">
+    <button class="close-menu" aria-label="Close menu">×</button>
+    <a href="#">Explore</a><a href="#">Buy</a><a href="#">Watch</a><a href="#">My Account</a>
+  </div>
+
+  <script src="dstv-script.js"></script>
+</body>
+</html>
